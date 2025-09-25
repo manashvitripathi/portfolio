@@ -1,7 +1,7 @@
 {
   "name": "manashvi-portfolio",
   "version": "0.1.0",
-  "homepage": "https://manashvitripathi.github.io/manashvi-portfolio",
+  "homepage": "https://manashvitripathi.github.io/portfolio",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.1",
