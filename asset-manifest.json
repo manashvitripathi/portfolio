@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/manashvi-portfolio/static/css/main.534eacb2.css",
+    "main.js": "/manashvi-portfolio/static/js/main.0c567e94.js",
+    "static/js/453.da220806.chunk.js": "/manashvi-portfolio/static/js/453.da220806.chunk.js",
+    "index.html": "/manashvi-portfolio/index.html",
+    "main.534eacb2.css.map": "/manashvi-portfolio/static/css/main.534eacb2.css.map",
+    "main.0c567e94.js.map": "/manashvi-portfolio/static/js/main.0c567e94.js.map",
+    "453.da220806.chunk.js.map": "/manashvi-portfolio/static/js/453.da220806.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.534eacb2.css",
+    "static/js/main.0c567e94.js"
+  ]
+}
