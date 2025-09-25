@@ -1,0 +1,270 @@
+.experience {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    /* Force visibility */
+    display: block !important;
+    visibility: visible !important;
+}
+
+.experience::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.experience .container {
+    position: relative;
+    z-index: 2;
+}
+
+.experience-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    color: white;
+    font-weight: 700;
+}
+
+.experience-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    /* Ensure timeline is always visible */
+    min-height: 50px;
+}
+
+/* Timeline line */
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #f093fb, #a29bfe, #6c5ce7);
+    border-radius: 2px;
+}
+
+/* Force visibility for debugging */
+.experience-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 80px;
+    /* Force items to be visible */
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Animation enhancement when timeline becomes visible */
+.experience-timeline:not(.timeline-visible) .experience-item {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.timeline-visible .experience-item {
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.experience-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.experience-content:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 2rem;
+}
+
+.company-info h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #f093fb;
+    margin-bottom: 0.5rem;
+}
+
+.company-info h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    opacity: 0.9;
+}
+
+.experience-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+}
+
+.duration,
+.location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.duration svg,
+.location svg {
+    font-size: 0.8rem;
+    color: #a29bfe;
+}
+
+.responsibilities h5 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #f093fb;
+    font-weight: 600;
+}
+
+.responsibilities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.responsibilities li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.responsibilities li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #a29bfe;
+    font-weight: bold;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 18px;
+    top: 2.5rem;
+    width: 26px;
+    height: 26px;
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+    z-index: 3;
+}
+
+.timeline-dot svg {
+    font-size: 0.7rem;
+    color: white;
+}
+
+/* Stagger animations for experience items */
+.experience-timeline .experience-item.slide-in-left.stagger-1 {
+    transition-delay: 0.1s;
+}
+
+.experience-timeline .experience-item.slide-in-left.stagger-2 {
+    transition-delay: 0.2s;
+}
+
+.experience-timeline .experience-item.slide-in-left.stagger-3 {
+    transition-delay: 0.3s;
+}
+
+.experience-timeline .experience-item.slide-in-left.stagger-4 {
+    transition-delay: 0.4s;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .experience {
+        padding: 60px 0;
+    }
+
+    .experience-title {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .experience-timeline::before {
+        left: 20px;
+    }
+
+    .experience-item {
+        padding-left: 60px;
+        margin-bottom: 2rem;
+    }
+
+    .experience-content {
+        padding: 2rem;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .experience-meta {
+        align-items: flex-start;
+    }
+
+    .company-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .company-info h4 {
+        font-size: 1rem;
+    }
+
+    .timeline-dot {
+        left: 8px;
+        width: 24px;
+        height: 24px;
+        top: 2rem;
+    }
+
+    .timeline-dot svg {
+        font-size: 0.6rem;
+    }
+
+    .responsibilities li {
+        font-size: 0.9rem;
+    }
+}

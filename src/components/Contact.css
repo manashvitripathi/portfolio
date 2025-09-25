@@ -1,0 +1,214 @@
+.contact {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.contact-header h2 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.contact-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Ensure slide-in animation is visible */
+.contact-info.slide-in-left {
+    opacity: 0 !important;
+    transform: translateX(-80px) !important;
+    transition: opacity 1s ease, transform 1s ease !important;
+}
+
+.contact-info.slide-in-left.animate {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Stagger animation for contact items */
+.contact-info.slide-in-left .contact-item.stagger-1 {
+    transition-delay: 0.1s;
+}
+
+.contact-info.slide-in-left .contact-item.stagger-2 {
+    transition-delay: 0.2s;
+}
+
+.contact-info.slide-in-left .contact-item.stagger-3 {
+    transition-delay: 0.3s;
+}
+
+.contact-info.slide-in-left .contact-item.stagger-4 {
+    transition-delay: 0.4s;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.contact-details h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.contact-details p,
+.contact-details a {
+    color: #666;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    color: #6c5ce7;
+}
+
+.contact-form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure slide-in animation is visible */
+.contact-form.slide-in-right {
+    opacity: 0 !important;
+    transform: translateX(80px) !important;
+    transition: opacity 1s ease, transform 1s ease !important;
+}
+
+.contact-form.slide-in-right.animate {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+.contact-form h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background: #f8f9fa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #6c5ce7;
+    background: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.send-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(108, 92, 231, 0.4);
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 60px 0;
+    }
+
+    .contact-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .contact-header p {
+        font-size: 1rem;
+    }
+
+    .contact-item {
+        padding: 1.5rem;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .contact-form {
+        padding: 2rem;
+    }
+}
