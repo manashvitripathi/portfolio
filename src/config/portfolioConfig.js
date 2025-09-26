@@ -49,7 +49,7 @@ const portfolioConfig = {
         },
         {
             id: 3,
-            value: "18+",
+            value: "20+",
             label: "Happy Client",
             delay: "stagger-3"
         }
