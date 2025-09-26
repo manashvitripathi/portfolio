@@ -57,7 +57,7 @@ const portfolioConfig = {
 
     // About Section
     about: {
-        yearsExperience: "5+",
+        yearsExperience: "8+",
         experienceLabel: "Years Experience",
         callToAction: {
             hireMeText: "Hire Me",
@@ -330,9 +330,15 @@ const portfolioConfig = {
     // SEO and Meta Information
     seo: {
         title: "Manashvi Tripathi - Business Development Manager",
-        description: "Professional Business Development Manager with 5+ years of experience in government sales, strategic partnerships, and digital transformation.",
-        keywords: "Business Development, Sales Manager, Government Sales, Digital Transformation, AI Tools, Lead Generation",
-        author: "Manashvi Tripathi"
+        description: "Professional Business Development Manager with 8+ years of experience in government sales, strategic partnerships, and digital transformation. Expert in AI tools, lead generation, and client relationship management.",
+        keywords: "Manashvi Tripathi, Business Development Manager, Government Sales, Strategic Partnerships, Digital Transformation, AI Tools, Lead Generation, B2B Sales, LinkedIn Sales Navigator, ChatGPT",
+        author: "Manashvi Tripathi",
+        url: "https://manashvitripathi.github.io/portfolio",
+        image: "Sitelogo.jpeg",
+        twitterHandle: "@manashvitripathi", // Add if you have one
+        linkedin: "https://www.linkedin.com/in/manashvitripathi",
+        type: "website",
+        locale: "en_US"
     }
 };
 
