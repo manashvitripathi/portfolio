@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin } from 'react-icons/fa';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import portfolioConfig from '../config/portfolioConfig';
 import './Contact.css';
 
 const Contact = () => {
@@ -12,71 +12,47 @@ const Contact = () => {
         <section id="contact" className="contact">
             <div className="container">
                 <div ref={headerRef} className={`contact-header fade-in ${headerVisible ? 'animate' : ''}`}>
-                    <h2>Get In Touch</h2>
-                    <p>Ready to discuss your next project or explore opportunities?</p>
+                    <h2>{portfolioConfig.contact.header.title}</h2>
+                    <p>{portfolioConfig.contact.header.subtitle}</p>
                 </div>
 
                 <div className="contact-content">
                     <div ref={infoRef} className={`contact-info slide-in-left ${infoVisible ? 'animate' : ''}`}>
-                        <div className="contact-item stagger-1">
-                            <div className="contact-icon">
-                                <FaPhone />
+                        {portfolioConfig.contact.info.map((item, index) => (
+                            <div key={item.id} className={`contact-item stagger-${index + 1}`}>
+                                <div className="contact-icon">
+                                    <item.icon />
+                                </div>
+                                <div className="contact-details">
+                                    <h3>{item.title}</h3>
+                                    {item.link ? (
+                                        <a href={item.link} target="_blank" rel="noopener noreferrer">
+                                            {item.details}
+                                        </a>
+                                    ) : (
+                                        <p>{item.details}</p>
+                                    )}
+                                </div>
                             </div>
-                            <div className="contact-details">
-                                <h3>Phone</h3>
-                                <p>08800896164</p>
-                            </div>
-                        </div>
-
-                        <div className="contact-item stagger-2">
-                            <div className="contact-icon">
-                                <FaEnvelope />
-                            </div>
-                            <div className="contact-details">
-                                <h3>Email</h3>
-                                <p>tripthmannu8@gmail.com</p>
-                            </div>
-                        </div>
-
-                        <div className="contact-item stagger-3">
-                            <div className="contact-icon">
-                                <FaMapMarkerAlt />
-                            </div>
-                            <div className="contact-details">
-                                <h3>Location</h3>
-                                <p>Gurugram, India</p>
-                            </div>
-                        </div>
-
-                        <div className="contact-item stagger-4">
-                            <div className="contact-icon">
-                                <FaLinkedin />
-                            </div>
-                            <div className="contact-details">
-                                <h3>LinkedIn</h3>
-                                <a href="https://linkedin.com/in/manashvitripathi/" target="_blank" rel="noopener noreferrer">
-                                    Manashvi Tripathi
-                                </a>
-                            </div>
-                        </div>
+                        ))}
                     </div>
 
                     <div ref={formRef} className={`contact-form slide-in-right ${formVisible ? 'animate' : ''}`}>
                         <h3>Send Message</h3>
                         <form>
                             <div className="form-group">
-                                <input type="text" placeholder="Your Name" required />
+                                <input type="text" placeholder={portfolioConfig.contact.form.placeholders.name} required />
                             </div>
                             <div className="form-group">
-                                <input type="email" placeholder="Your Email" required />
+                                <input type="email" placeholder={portfolioConfig.contact.form.placeholders.email} required />
                             </div>
                             <div className="form-group">
-                                <input type="text" placeholder="Subject" required />
+                                <input type="text" placeholder={portfolioConfig.contact.form.placeholders.subject} required />
                             </div>
                             <div className="form-group">
-                                <textarea placeholder="Your Message" rows="6" required></textarea>
+                                <textarea placeholder={portfolioConfig.contact.form.placeholders.message} rows="6" required></textarea>
                             </div>
-                            <button type="submit" className="send-btn">Send Message</button>
+                            <button type="submit" className="send-btn">{portfolioConfig.contact.form.submitText}</button>
                         </form>
                     </div>
                 </div>

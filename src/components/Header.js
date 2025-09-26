@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import portfolioConfig from '../config/portfolioConfig';
 import './Header.css';
 
 const Header = () => {
@@ -21,14 +22,19 @@ const Header = () => {
         <header className="header">
             <div className="container">
                 <div className="logo">
-                    <div className="logo-icon">M</div>
-                    <span>Manashvi</span>
+                    <div className="logo-icon">{portfolioConfig.personal.name.charAt(0)}</div>
+                    <span>{portfolioConfig.personal.name.split(' ')[0]}</span>
                 </div>
                 <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
-                    <a href="#home" onClick={(e) => handleSmoothScroll(e, 'home')}>Home</a>
-                    <a href="#about" onClick={(e) => handleSmoothScroll(e, 'about')}>About</a>
-                    <a href="#experience" onClick={(e) => handleSmoothScroll(e, 'experience')}>Experience</a>
-                    <a href="#skills" onClick={(e) => handleSmoothScroll(e, 'skills')}>Skills</a>
+                    {portfolioConfig.navigation.map((item) => (
+                        <a 
+                            key={item.name} 
+                            href={item.href} 
+                            onClick={(e) => handleSmoothScroll(e, item.href.slice(1))}
+                        >
+                            {item.name}
+                        </a>
+                    ))}
                     <button className="contact-btn" onClick={(e) => handleSmoothScroll(e, 'contact')}>Get in Touch</button>
                 </nav>
                 <div className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>

@@ -1,5 +1,6 @@
 import React from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import portfolioConfig from '../config/portfolioConfig';
 import './Hero.css';
 
 const Hero = () => {
@@ -14,25 +15,19 @@ const Hero = () => {
                     <div ref={textRef} className={`hero-text fade-in ${textVisible ? 'animate' : ''}`}>
                         <h1>
                             Hello, I'm<br />
-                            <span className="name">Manashvi Tripathi</span>
+                            <span className="name">{portfolioConfig.personal.name}</span>
                         </h1>
                         <p>
-                            I am a Business Development Manager with a strong background in government sales, strategic partnerships, and digital transformation. I leverage AI tools to accelerate lead generation and deliver compelling product demos.
+                            {portfolioConfig.personal.heroDescription}
                         </p>
 
                         <div ref={statsRef} className={`stats slide-in-left ${statsVisible ? 'animate' : ''}`}>
-                            <div className="stat stagger-1">
-                                <h3>9 Y+</h3>
-                                <p>Experience</p>
-                            </div>
-                            <div className="stat stagger-2">
-                                <h3>5 Cr+</h3>
-                                <p>Revenue Generated</p>
-                            </div>
-                            <div className="stat stagger-3">
-                                <h3>18+</h3>
-                                <p>Happy Client</p>
-                            </div>
+                            {portfolioConfig.heroStats.map((stat) => (
+                                <div key={stat.id} className={`stat ${stat.delay}`}>
+                                    <h3>{stat.value}</h3>
+                                    <p>{stat.label}</p>
+                                </div>
+                            ))}
                         </div>
 
                     </div>
@@ -41,8 +36,8 @@ const Hero = () => {
                         <div className="image-container">
                             <div className="profile-bg"></div>
                             <img
-                                src={`${process.env.PUBLIC_URL}/manashvi-hero.jpeg`}
-                                alt="Manashvi Tripathi"
+                                src={`${process.env.PUBLIC_URL}/${portfolioConfig.personal.profileImage}`}
+                                alt={portfolioConfig.personal.name}
                                 className="profile-img"
                             />
                         </div>
