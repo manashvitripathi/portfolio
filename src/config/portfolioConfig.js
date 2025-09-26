@@ -27,7 +27,7 @@ const portfolioConfig = {
         title: "Business Development Manager",
         tagline: "Professional Business Development Manager",
         heroDescription: "I am a Business Development Manager with a strong background in government sales, strategic partnerships, and digital transformation. I leverage AI tools to accelerate lead generation and deliver compelling product demos.",
-        aboutDescription: "A strategic user of AI tools like ChatGPT and Sales Navigator to accelerate lead generation, personalize outreach, and streamline sales workflows. Proven expertise in B2B sales and client relationship management, with a knack for converting prospects into loyal customers. With 15+ years of experience in B2B sales, strategic partnerships, and digital transformation, I've helped organizations drive growth through innovation, data-driven strategy, and clear communication.",
+        aboutDescription: "A strategic user of AI tools like ChatGPT and Sales Navigator to accelerate lead generation, personalize outreach, and streamline sales workflows. Proven expertise in B2B sales and client relationship management, with a knack for converting prospects into loyal customers. With 8+ years of experience in B2B sales, strategic partnerships, and digital transformation, I've helped organizations drive growth through innovation, data-driven strategy, and clear communication.",
         profileImage: "manashvi-hero.jpeg",
         aboutImage: "manashvi-hero.jpeg",
         resumeFile: "Manashvi Resume.pdf"
@@ -37,7 +37,7 @@ const portfolioConfig = {
     heroStats: [
         {
             id: 1,
-            value: "9 Y+",
+            value: "8 Y+",
             label: "Experience",
             delay: "stagger-1"
         },
@@ -207,6 +207,17 @@ const portfolioConfig = {
                 "Managing client relationships and providing excellent customer service.",
                 "Coordinating with different departments to ensure smooth operations."
             ]
+        },
+        {
+            id: 4,
+            company: "INDUSIND BANK",
+            position: "Sales Officer",
+            location: "Delhi",
+            duration: "Oct 2017 - June 2020",
+            responsibilities: [
+                "Identify potential clients through various channels, cold calling, referrals, or assigned leads.",
+                "Identify opportunities to sell additional IndusInd Bank products and services that align with a client's financial situation.",
+            ]
         }
     ],
 
@@ -242,7 +253,7 @@ const portfolioConfig = {
                 id: 4,
                 icon: FaLinkedin,
                 title: "LinkedIn",
-                details: "Connect with me",
+                details: "Click here to connect",
                 link: "https://www.linkedin.com/in/manashvitripathi"
             }
         ],
@@ -250,10 +261,14 @@ const portfolioConfig = {
             placeholders: {
                 name: "Your Name",
                 email: "Your Email",
-                subject: "Subject",
                 message: "Your Message"
             },
             submitText: "Send Message"
+        },
+        emailjs: {
+            serviceId: process.env.REACT_APP_EMAILJS_SERVICE_ID || "your_service_id",
+            templateId: process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "your_template_id",
+            publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "your_public_key"
         }
     },
 
@@ -291,7 +306,6 @@ const portfolioConfig = {
         { name: "About", href: "#about" },
         { name: "Skills", href: "#skills" },
         { name: "Experience", href: "#experience" },
-        { name: "Contact", href: "#contact" }
     ],
 
     // Social Links
