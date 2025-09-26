@@ -27,9 +27,9 @@ const Header = () => {
                 </div>
                 <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
                     {portfolioConfig.navigation.map((item) => (
-                        <a 
-                            key={item.name} 
-                            href={item.href} 
+                        <a
+                            key={item.name}
+                            href={item.href}
                             onClick={(e) => handleSmoothScroll(e, item.href.slice(1))}
                         >
                             {item.name}

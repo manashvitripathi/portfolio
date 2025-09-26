@@ -7,6 +7,8 @@
     right: 0;
     z-index: 1000;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .header .container {
@@ -14,6 +16,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 20px;
+    max-width: 100%;
+    min-width: 0;
 }
 
 .logo {
@@ -23,6 +27,14 @@
     font-size: 1.5rem;
     font-weight: bold;
     color: #6c5ce7;
+    flex-shrink: 0;
+    min-width: 0;
+}
+
+.logo span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .logo-icon {
@@ -41,6 +53,8 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+    flex-shrink: 1;
+    min-width: 0;
 }
 
 .nav a {
@@ -100,6 +114,21 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+    .header .container {
+        padding: 1rem 15px;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+        gap: 8px;
+    }
+
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
     .menu-toggle {
         display: flex;
     }
@@ -131,5 +160,48 @@
 
     .contact-btn {
         margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .container {
+        padding: 0.8rem 10px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        gap: 6px;
+    }
+
+    .logo-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+
+    .menu-toggle span {
+        width: 20px;
+        height: 2px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header .container {
+        padding: 0.8rem 8px;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+        gap: 4px;
+    }
+
+    .logo span {
+        max-width: 120px;
+    }
+
+    .logo-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
     }
 }

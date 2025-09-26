@@ -27,7 +27,7 @@ const portfolioConfig = {
         title: "Business Development Manager",
         tagline: "Professional Business Development Manager",
         heroDescription: "I am a Business Development Manager with a strong background in government sales, strategic partnerships, and digital transformation. I leverage AI tools to accelerate lead generation and deliver compelling product demos.",
-        aboutDescription: "A strategic user of AI tools like ChatGPT and Sales Navigator to accelerate lead generation, personalize outreach, and streamline sales workflows. Proven expertise in B2B sales and client relationship management, with a knack for converting prospects into loyal customers.",
+        aboutDescription: "A strategic user of AI tools like ChatGPT and Sales Navigator to accelerate lead generation, personalize outreach, and streamline sales workflows. Proven expertise in B2B sales and client relationship management, with a knack for converting prospects into loyal customers. With 15+ years of experience in B2B sales, strategic partnerships, and digital transformation, I've helped organizations drive growth through innovation, data-driven strategy, and clear communication.",
         profileImage: "manashvi-hero.jpeg",
         aboutImage: "manashvi-hero.jpeg",
         resumeFile: "Manashvi Resume.pdf"
@@ -43,7 +43,7 @@ const portfolioConfig = {
         },
         {
             id: 2,
-            value: "5 Cr+",
+            value: "3 Cr+",
             label: "Revenue Generated",
             delay: "stagger-2"
         },

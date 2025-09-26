@@ -48,10 +48,6 @@ const About = () => {
                         <p>
                             {portfolioConfig.personal.aboutDescription}
                         </p>
-                        <p>
-                            With 15+ years of experience in B2B sales, strategic partnerships, and digital transformation, I've helped organizations drive growth through innovation, data-driven strategy, and clear communication.
-                        </p>
-
                         <div className="about-buttons">
                             <button className="hire-me-btn" onClick={handleHireMeClick}>{portfolioConfig.about.callToAction.hireMeText}</button>
                             <button className="download-cv" onClick={handleDownloadCV}>{portfolioConfig.about.callToAction.downloadCVText}</button>
