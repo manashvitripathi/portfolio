@@ -88,8 +88,24 @@ npm run deploy
 - Ensure GitHub Pages is enabled in repository settings
 - Wait 5-10 minutes for changes to propagate
 
-## Updating Your Site
-After making changes:
+## Automated Deployment with GitHub Actions
+
+### Automatic Deployment (Recommended)
+The repository now includes a GitHub Actions workflow that automatically deploys your site when you merge changes to the main branch.
+
+**How it works:**
+1. Make changes to your code
+2. Commit and push to main branch (or merge a pull request)
+3. GitHub Actions automatically builds and deploys your site
+4. Your live site updates within a few minutes!
+
+**Setup Requirements:**
+1. Enable GitHub Pages in your repository settings
+2. Set Source to "GitHub Actions" (not "Deploy from a branch")
+3. The workflow file is already included at `.github/workflows/deploy.yml`
+
+### Manual Deployment (Alternative)
+If you prefer manual control over deployments:
 ```bash
 git add .
 git commit -m "Update content"
@@ -97,4 +113,13 @@ git push origin main
 npm run deploy
 ```
 
-Your live site will update automatically!
+### Updating Your Site
+With automatic deployment:
+```bash
+git add .
+git commit -m "Update content"
+git push origin main
+# Site deploys automatically - no need to run npm run deploy!
+```
+
+Your live site will update automatically within 2-5 minutes after pushing to main!
